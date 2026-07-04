@@ -1,0 +1,9 @@
+name: api
+type: application
+dockerfile: infrastructure/docker/api.Dockerfile
+port: 8000
+env:
+  - name: DATABASE_URL
+    value: ${DATABASE_URL}
+  - name: REDIS_URL
+    value: ${REDIS_URL}

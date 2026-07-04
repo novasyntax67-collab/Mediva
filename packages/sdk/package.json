@@ -1,0 +1,7 @@
+{
+  "name": "@packages/sdk",
+  "version": "1.0.0",
+  "private": true,
+  "main": "typescript/dist/index.js",
+  "types": "typescript/dist/index.d.ts"
+}

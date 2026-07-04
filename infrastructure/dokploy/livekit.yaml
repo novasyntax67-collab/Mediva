@@ -1,0 +1,8 @@
+port: 7880
+bind_addresses:
+  - ""
+redis:
+  address: redis:6379
+  db: 1
+keys:
+  devkey: secret
