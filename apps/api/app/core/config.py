@@ -20,7 +20,7 @@ class Settings(BaseSettings):
     
     # Livekit
     LIVEKIT_API_KEY: str = "devkey"
-    LIVEKIT_API_SECRET: str = "secret"
+    LIVEKIT_API_SECRET: str = "devkey-secret-long-secure-32-characters-minimum"
     LIVEKIT_URL: str = "http://localhost:7880"
     
     model_config = SettingsConfigDict(

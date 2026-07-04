@@ -5,4 +5,4 @@ redis:
   address: redis:6379
   db: 1
 keys:
-  devkey: secret
+  devkey: devkey-secret-long-secure-32-characters-minimum
