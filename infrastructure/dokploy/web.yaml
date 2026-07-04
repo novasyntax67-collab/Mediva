@@ -1,6 +1,6 @@
 name: web
 type: application
-dockerfile: infrastructure/docker/web.Dockerfile
+dockerfile: infrastructure/docker/web/Dockerfile
 port: 3000
 env:
   - name: NEXT_PUBLIC_SUPABASE_URL

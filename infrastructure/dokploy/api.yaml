@@ -1,6 +1,6 @@
 name: api
 type: application
-dockerfile: infrastructure/docker/api.Dockerfile
+dockerfile: infrastructure/docker/api/Dockerfile
 port: 8000
 env:
   - name: DATABASE_URL

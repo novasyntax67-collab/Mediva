@@ -97,6 +97,29 @@ services:
       redis:
         condition: service_healthy
 
+  web:
+    build:
+      context: .
+      dockerfile: infrastructure/docker/web/Dockerfile
+    container_name: healthcare-web
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env.web.example
+    depends_on:
+      - api
+
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: healthcare-tunnel
+    restart: always
+    command: tunnel run
+    environment:
+      - TUNNEL_TOKEN=${CLOUDFLARE_TUNNEL_TOKEN}
+    depends_on:
+      - web
+      - api
+
 volumes:
   postgres_data:
   redis_data:
