@@ -36,6 +36,8 @@ COPY --from=builder /app/apps/web/.next ./apps/web/.next
 COPY --from=builder /app/apps/web/node_modules ./apps/web/node_modules
 COPY --from=builder /app/apps/web/package.json ./apps/web/package.json
 
+RUN npm install -g pnpm
+
 USER nextjs
 
 EXPOSE 3000
